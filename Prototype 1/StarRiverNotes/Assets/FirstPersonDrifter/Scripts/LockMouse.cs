@@ -4,24 +4,28 @@ using UnityEngine;
 using System.Collections;
 
 public class LockMouse : MonoBehaviour
-{	
+{
+    private bool key;
 	void Start()
 	{
-		LockCursor(true);
+        key = true;
+		LockCursor(key);
+        key = !key;
 	}
 
     void Update()
     {
     	// lock when mouse is clicked
-    	if( Input.GetMouseButtonDown(0) && Time.timeScale > 0.0f )
-    	{
-    		LockCursor(true);
-    	}
+    	//if( Input.GetMouseButtonDown(0) && Time.timeScale > 0.0f )
+    	//{
+    	//	LockCursor(true);
+    	//}
     
     	// unlock when escape is hit
         if  ( Input.GetKeyDown(KeyCode.Escape) )
         {
-        	LockCursor(Cursor.lockState == CursorLockMode.Locked);
+        	LockCursor(key);
+            key = !key;
         }
     }
     
