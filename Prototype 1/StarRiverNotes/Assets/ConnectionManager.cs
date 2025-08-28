@@ -9,7 +9,7 @@ public class ConnectionManager : MonoBehaviour
     public Material lineMaterial;
     public Color lineColor = Color.white;
     public float lineWidth = 0.1f;
-    public float connectionSpeed = 5f; // Á¬Ïß¶¯»­ËÙ¶È
+    public float connectionSpeed = 5f; // ï¿½ï¿½ï¿½ß¶ï¿½ï¿½ï¿½ï¿½Ù¶ï¿½
 
     private List<GameObject> selectedObjects = new List<GameObject>();
     private List<LineRenderer> activeConnections = new List<LineRenderer>();
@@ -29,7 +29,6 @@ public class ConnectionManager : MonoBehaviour
 
     public void OnObjectClicked(GameObject clickedObject)
     {
-        // Èç¹ûÎïÌåÒÑ±»Ñ¡Ôñ£¬ÔòÈ¡ÏûÑ¡Ôñ
         if (selectedObjects.Contains(clickedObject))
         {
             selectedObjects.Remove(clickedObject);
@@ -37,11 +36,9 @@ public class ConnectionManager : MonoBehaviour
             return;
         }
 
-        // Ñ¡ÔñÐÂÎïÌå
         selectedObjects.Add(clickedObject);
         HighlightObject(clickedObject, true);
 
-        // Èç¹ûÒÑÑ¡ÔñÁ½¸öÎïÌå£¬´´½¨Á¬Ïß
         if (selectedObjects.Count == 2)
         {
             CreateConnection(selectedObjects[0], selectedObjects[1]);
@@ -51,11 +48,9 @@ public class ConnectionManager : MonoBehaviour
 
     void CreateConnection(GameObject obj1, GameObject obj2)
     {
-        // ´´½¨Á¬Ïß¶ÔÏó
         GameObject connectionObj = new GameObject("Connection");
         connectionObj.transform.SetParent(transform);
 
-        // Ìí¼ÓLineRenderer×é¼þ
         LineRenderer lineRenderer = connectionObj.AddComponent<LineRenderer>();
         lineRenderer.material = lineMaterial;
         lineRenderer.startColor = lineColor;
@@ -64,23 +59,19 @@ public class ConnectionManager : MonoBehaviour
         lineRenderer.endWidth = lineWidth;
         lineRenderer.positionCount = 2;
 
-        // ³õÊ¼ÉèÖÃÁ¬ÏßÎ»ÖÃ
         Vector3 startPos = obj1.transform.position;
         Vector3 endPos = obj2.transform.position;
         lineRenderer.SetPosition(0, startPos);
-        lineRenderer.SetPosition(1, startPos); // ³õÊ¼ÖÕµãÉèÎªÆðµã
+        lineRenderer.SetPosition(1, startPos); 
 
-        // ±£´æÁ¬ÏßÒýÓÃ
         activeConnections.Add(lineRenderer);
 
-        // Æô¶¯Á¬Ïß¶¯»­
         Coroutine animationCoroutine = StartCoroutine(AnimateConnection(lineRenderer, startPos, endPos));
         activeAnimations.Add(animationCoroutine);
 
-        Debug.Log($"ÕýÔÚÁ¬½Ó {obj1.name} ºÍ {obj2.name}");
+        Debug.Log($"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ {obj1.name} ï¿½ï¿½ {obj2.name}");
     }
 
-    // Á¬Ïß¶¯»­Ð­³Ì
     IEnumerator AnimateConnection(LineRenderer lineRenderer, Vector3 start, Vector3 end)
     {
         float progress = 0f;
@@ -93,9 +84,8 @@ public class ConnectionManager : MonoBehaviour
             yield return null;
         }
 
-        // È·±£×îÖÕÎ»ÖÃ×¼È·
         lineRenderer.SetPosition(1, end);
-        Debug.Log($"Á¬½ÓÍê³É: {start} -> {end}");
+        Debug.Log($"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: {start} -> {end}");
     }
 
     void HighlightObject(GameObject obj, bool highlight)
@@ -105,16 +95,14 @@ public class ConnectionManager : MonoBehaviour
         {
             if (highlight)
             {
-                // ±£´æÔ­Ê¼²ÄÖÊ²¢Ó¦ÓÃ¸ßÁÁ
                 if (!obj.GetComponent<ObjectInfo>())
                 {
                     obj.AddComponent<ObjectInfo>().originalMaterial = renderer.material;
                 }
-                renderer.material.color = Color.yellow; // ¸ßÁÁÑÕÉ«
+                renderer.material.color = Color.yellow; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É«
             }
             else
             {
-                // »Ö¸´Ô­Ê¼²ÄÖÊ
                 ObjectInfo objectInfo = obj.GetComponent<ObjectInfo>();
                 if (objectInfo != null && objectInfo.originalMaterial != null)
                 {
@@ -135,7 +123,6 @@ public class ConnectionManager : MonoBehaviour
 
     public void ClearAllConnections()
     {
-        // Í£Ö¹ËùÓÐ¶¯»­
         foreach (Coroutine animation in activeAnimations)
         {
             if (animation != null)
@@ -145,7 +132,6 @@ public class ConnectionManager : MonoBehaviour
         }
         activeAnimations.Clear();
 
-        // É¾³ýËùÓÐÁ¬Ïß
         foreach (LineRenderer connection in activeConnections)
         {
             Destroy(connection.gameObject);
@@ -154,17 +140,14 @@ public class ConnectionManager : MonoBehaviour
 
         ClearSelection();
 
-        Debug.Log("ÒÑÇå³ýËùÓÐÁ¬Ïß");
+        Debug.Log("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
     }
 
-    // ¿ÉÑ¡£ºÌí¼ÓÒ»¸ö·½·¨À´´´½¨¾²Ì¬Á¬Ïß£¨ÎÞ¶¯»­£©
     public void CreateStaticConnection(GameObject obj1, GameObject obj2)
     {
-        // ´´½¨Á¬Ïß¶ÔÏó
         GameObject connectionObj = new GameObject("StaticConnection");
         connectionObj.transform.SetParent(transform);
 
-        // Ìí¼ÓLineRenderer×é¼þ
         LineRenderer lineRenderer = connectionObj.AddComponent<LineRenderer>();
         lineRenderer.material = lineMaterial;
         lineRenderer.startColor = lineColor;
@@ -173,18 +156,16 @@ public class ConnectionManager : MonoBehaviour
         lineRenderer.endWidth = lineWidth;
         lineRenderer.positionCount = 2;
 
-        // ÉèÖÃÁ¬ÏßÎ»ÖÃ
         lineRenderer.SetPosition(0, obj1.transform.position);
         lineRenderer.SetPosition(1, obj2.transform.position);
 
-        // ±£´æÁ¬ÏßÒýÓÃ
         activeConnections.Add(lineRenderer);
 
-        Debug.Log($"ÒÑ´´½¨¾²Ì¬Á¬½Ó {obj1.name} ºÍ {obj2.name}");
+        Debug.Log($"ï¿½Ñ´ï¿½ï¿½ï¿½ï¿½ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½ {obj1.name} ï¿½ï¿½ {obj2.name}");
     }
 }
 
-// ¸¨ÖúÀà£¬ÓÃÓÚ´æ´¢ÎïÌåÔ­Ê¼ÐÅÏ¢
+// Using ChatGPT to help write code
 public class ObjectInfo : MonoBehaviour
 {
     public Material originalMaterial;
