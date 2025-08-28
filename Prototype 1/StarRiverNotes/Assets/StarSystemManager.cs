@@ -40,13 +40,11 @@ public class StarSystemManager : MonoBehaviour
     {
         if (selectedStars.Contains(star))
         {
-            // 取消选择
             selectedStars.Remove(star);
             star.SetSelected(false);
         }
         else
         {
-            // 选择新星体
             selectedStars.Add(star);
             star.SetSelected(true);
         }
@@ -56,7 +54,6 @@ public class StarSystemManager : MonoBehaviour
 
     void UpdateConnections()
     {
-        // 清除所有现有连线
         foreach (Transform child in transform)
         {
             if (child.name == "Connection")
@@ -65,7 +62,6 @@ public class StarSystemManager : MonoBehaviour
             }
         }
 
-        // 创建新连线
         for (int i = 0; i < selectedStars.Count - 1; i++)
         {
             CreateConnection(selectedStars[i].transform.position, selectedStars[i + 1].transform.position);
@@ -114,4 +110,5 @@ public class Star : MonoBehaviour
         isSelected = selected;
         GetComponent<Renderer>().material = selected ? selectedMaterial : originalMaterial;
     }
+        // Using ChatGPT to help write code
 }
