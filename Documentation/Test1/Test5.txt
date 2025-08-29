@@ -1,0 +1,44 @@
+嗯，好的，那我们接下来测试一下。
+Alright, lets test it next.
+就首先对我们开始运行对，然后你看，你看这里，你点开它之后，对的你点开，你看点开它之后对你可以用鼠标去点这个星星。
+First, lets start the operation. Then, look here; after you click on it, you can use the mouse to click on this star.
+点之后再去点那个词典点这个词典你就可以对，可以在里面输入东西在里面输哦，对的，对的，对的。
+After clicking on that dictionary, you can click on this dictionary, and then you can input things inside it. Yes, thats right, thats right, thats right.
+哦，他可以，他可以本地储存，是吗？我现在在点开他可以再看到吗？对了，你可以再看到，然后你看这边这边有个有个。
+Oh, he can, he can store locally, right? Can I still see it now that I’ve opened it? By the way, you can still see it, and look over here, there’s something here.
+有个大的星球，对吧？这就是我们的主题，我们怎么我们topic，然后你可以在这边对储存储存任意一个文字，然后你点两个星球对你要点啊，你ESC把鼠标换出来。
+There is a large planet, right? This is our topic. We can store any text here, and then you can click on the two planets that you want to select. Press ESC to switch the mouse out.
+对了的yes，然后你就可以点这两个星球把它们连接起来对的，对的，好，那我们。
+Yes, then you can click on these two planets to connect them, right, right, good, then we...
+我们，我们开始测试，我们开始测试。
+We, we are starting the test, we are starting the test.
+第一步，我需要你去找一个星球。
+The first step is for you to find a planet.
+对，然后我需要你去对大的星球大的星球，我需要你给它提供一个主题为它命名。
+Yes, then I need you to provide a theme to name the large planet.
+OK.
+好的。
+好，接下来去找一个他周围的小星球然后去写一个对给那个小星球也进行一个内容填充，就写一个跟刚刚主题有关的东西，什么都行，好对的。
+Okay, next, lets find a small planet around him and write a content piece for that small planet as well. Just write something related to the previous theme; anything will do, thats right.
+对的，然后第三个第三个就是现在把它们两个连起来好，你现在已经获得一个知识数，然后后现在现在回头去随便找一个大其他的大星球，对的，对的。
+Right, and then the third point is to connect the two together. Now you have acquired a certain amount of knowledge, and now you can go back and randomly look for another large planet. Right, right.
+然后。
+Then.
+然后把这个大星球周围的小星球连起来全部对然后你现在再回头，你现在再回头你还能找到刚刚那个星球吗？
+Then connect all the small planets around this big planet, and now turn back. Can you still find that planet from just now?
+能好的。
+It can be good.
+好点开看看里面储存的东西在不在好在的在的。
+Its good to open it and see if the things stored inside are there, and its good that they are.
+有没有什么想法就好不好用啊？或者是有没有什么其他改进，我觉得就是它这个每次要ESC换出鼠标太繁琐了然后就能不能我比如说我点击它点击这个星球我就可以直接输入，我不需要再去点开。
+Is there any idea about whether its easy to use? Or are there any other improvements? I feel that having to press ESC every time to switch to the mouse is too cumbersome. Would it be possible, for example, if I click on it or click on this planet, I could input directly without needing to open it again?
+左下角那个词典哦，这个是这个是我一直想做的，我没做出来，因为我水平不够啊。好的，然后再就是。
+The dictionary in the lower left corner, oh, this is something Ive always wanted to do, but I couldnt accomplish it because my skills arent sufficient. Alright, and then theres also...
+他的这个星球的，怎么说呢，这个我觉得他最好是能拖动或者是我能自己去创建星球吧，他现在的量太少了，对了，这个我们做也会做，OK啊，您觉得他这个3D的比2D的这个画面更直观吗？就是比如说比那种框架图什么的。
+How should I put it about his planet? I think it would be best if he could move it or if I could create the planet myself. Right now, the quantity is too small. By the way, we can also work on this, thats fine. Do you think his3D visuals are more intuitive than the2D ones? For example, compared to those framework diagrams?
+也没有更直观吧，但是确实记起来很有意思。如果是我要在VR环境里面学习的话，我觉得。
+It may not be more intuitive, but it is indeed interesting to remember. If I were to learn in a VR environment, I think...
+一个这样的肯定是比一个在VR里面给我摆一个2D画面要更有趣更好用的。
+One like this is definitely more interesting and useful than one that just presents a2D image in VR.
+好，非常感谢您好，谢谢，谢谢。
+Good, thank you very much, hello, thank you, thank you.
